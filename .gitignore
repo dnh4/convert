@@ -1,0 +1,11 @@
+# ignore tous les fichiers sauf le gitignore, les fichiers .cpp, les fichiers .h, le vcxproj et la sln
+/*
+!/Source Files/
+!/Header Files
+!/.gitignore
+!/convert.vcxproj
+!/convert.vcxproj.filters
+!/convert.vcxproj.user
+!/convert.sln
+
+

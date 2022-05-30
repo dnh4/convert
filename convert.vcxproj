@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header Files\acrxEntryPoint.h" />
+    <ClInclude Include="Header Files\cmdConvert.h" />
+    <ClInclude Include="Header Files\convertArc.h" />
+    <ClInclude Include="Header Files\convertCircle.h" />
+    <ClInclude Include="Header Files\convertEllipse.h" />
+    <ClInclude Include="Header Files\convertFace.h" />
+    <ClInclude Include="Header Files\convertLine.h" />
+    <ClInclude Include="Header Files\convertPoly2D.h" />
+    <ClInclude Include="Header Files\convertPoly3D.h" />
+    <ClInclude Include="Header Files\convertSpline.h" />
+    <ClInclude Include="Header Files\Dalles.h" />
+    <ClInclude Include="Header Files\helperFunctions.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source Files\acrxEntryPoint.cpp" />
+    <ClCompile Include="Source Files\cmdConvert.cpp" />
+    <ClCompile Include="Source Files\convertArc.cpp" />
+    <ClCompile Include="Source Files\convertCircle.cpp" />
+    <ClCompile Include="Source Files\convertEllipse.cpp" />
+    <ClCompile Include="Source Files\convertFace.cpp" />
+    <ClCompile Include="Source Files\convertLine.cpp" />
+    <ClCompile Include="Source Files\convertPoly2D.cpp" />
+    <ClCompile Include="Source Files\convertPoly3D.cpp" />
+    <ClCompile Include="Source Files\convertSpline.cpp" />
+    <ClCompile Include="Source Files\Dalles.cpp" />
+    <ClCompile Include="Source Files\helperFunctions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\fmaplib\FmapLib.vcxproj">
+      <Project>{e68574e6-6409-4925-b2f8-d8f3f08f3c7d}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BED81972-F06D-41B5-A936-9E28B4E6ED68}</ProjectGuid>
+    <PlatformToolset>v141</PlatformToolset>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\inc\arx\rxsdk_Releasecfg.props" />
+    <Import Project="..\inc\arx\arx.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\inc\arx\rxsdk_Releasecfg.props" />
+    <Import Project="..\inc\arx\arx.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\inc\arx\rxsdk_Debugcfg.props" />
+    <Import Project="..\inc\arx\arx.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\inc\arx\rxsdk_Debugcfg.props" />
+    <Import Project="..\inc\arx\arx.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>.\x64\Release</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>.\x64\Debug</OutDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\inc\arx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_TOOLKIT_IN_DLL_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>
+      </RuntimeTypeInfo>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <StringPooling>
+      </StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\lib-x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>..\inc\arx\RxExport.def</ModuleDefinitionFile>
+      <AdditionalDependencies>grxport.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <CLRThreadAttribute>
+      </CLRThreadAttribute>
+      <CLRImageType>Default</CLRImageType>
+      <CLRUnmanagedCodeCheck>
+      </CLRUnmanagedCodeCheck>
+      <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ImportLibrary>
+      </ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\Header Files;..\inc\grx;..\inc\arx;..\FmapLib\Header Files;C:\Program Files\PCL 1.8.1\3rdParty\Boost\include\boost-1_64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_WIN64;_TOOLKIT_IN_DLL_;_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>
+      </RuntimeTypeInfo>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <StringPooling>
+      </StringPooling>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\lib-x64;..\FmapLib\x64\Debug;C:\Program Files\PCL 1.8.1\3rdParty\Boost\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>..\inc\arx\RxExport.def</ModuleDefinitionFile>
+      <AdditionalDependencies>grxport.lib;gcad.lib;gcap.lib;gcax.lib;gcdb.lib;gced.lib;gcgs.lib;gcui.lib;gcut.lib;gmap.lib;gmdb.lib;gplt.lib;TD_AcisBuilder.lib;TD_Alloc.lib;TD_Ave.lib;TD_BmpExport.lib;TD_Br.lib;TD_BrepRenderer.lib;TD_Db.lib;TD_DbRoot.lib;TD_DgnImport.lib;TD_DgnUnderlay.lib;TD_Dwf7Export.lib;TD_Dwf7Import.lib;TD_DwfUnderlay.lib;TD_DynBlocks.lib;TD_Ge.lib;TD_Gi.lib;TD_Gs.lib;TD_Key.lib;TD_PdfExport.lib;TD_PDFToolkit.lib;TD_PdfUnderlay.lib;TD_Root.lib;TD_Sm.lib;TD_SpatialIndex.lib;TD_STLExport.lib;FmapLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <CLRThreadAttribute>
+      </CLRThreadAttribute>
+      <CLRImageType>Default</CLRImageType>
+      <CLRUnmanagedCodeCheck>
+      </CLRUnmanagedCodeCheck>
+      <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ImportLibrary>
+      </ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\inc\arx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_TOOLKIT_IN_DLL_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <RuntimeTypeInfo>
+      </RuntimeTypeInfo>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\lib-x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>..\inc\arx\RxExport.def</ModuleDefinitionFile>
+      <AdditionalDependencies>grxport.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <CLRThreadAttribute>
+      </CLRThreadAttribute>
+      <CLRImageType>Default</CLRImageType>
+      <CLRUnmanagedCodeCheck>
+      </CLRUnmanagedCodeCheck>
+      <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ImportLibrary>
+      </ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.\Header Files;..\inc\grx;..\inc\arx;..\FmapLib\Header Files;C:\Program Files\PCL 1.8.1\3rdParty\Boost\include\boost-1_64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_WIN64;_TOOLKIT_IN_DLL_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <RuntimeTypeInfo>
+      </RuntimeTypeInfo>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <Optimization>Full</Optimization>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\lib-x64;..\FmapLib\x64\Release;C:\Program Files\PCL 1.8.1\3rdParty\Boost\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>..\inc\arx\RxExport.def</ModuleDefinitionFile>
+      <AdditionalDependencies>grxport.lib;gcad.lib;gcap.lib;gcax.lib;gcdb.lib;gced.lib;gcgs.lib;gcui.lib;gcut.lib;gmap.lib;gmdb.lib;gplt.lib;TD_AcisBuilder.lib;TD_Alloc.lib;TD_Ave.lib;TD_BmpExport.lib;TD_Br.lib;TD_BrepRenderer.lib;TD_Db.lib;TD_DbRoot.lib;TD_DgnImport.lib;TD_DgnUnderlay.lib;TD_Dwf7Export.lib;TD_Dwf7Import.lib;TD_DwfUnderlay.lib;TD_DynBlocks.lib;TD_Ge.lib;TD_Gi.lib;TD_Gs.lib;TD_Key.lib;TD_PdfExport.lib;TD_PDFToolkit.lib;TD_PdfUnderlay.lib;TD_Root.lib;TD_Sm.lib;TD_SpatialIndex.lib;TD_STLExport.lib;FmapLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <CLRThreadAttribute>
+      </CLRThreadAttribute>
+      <CLRImageType>Default</CLRImageType>
+      <CLRUnmanagedCodeCheck>
+      </CLRUnmanagedCodeCheck>
+      <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ImportLibrary>
+      </ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "C:\Futurmap\Dev-Outils\GStarCAD\GRX20\convert\x64\Release\convert.grx" "C:\Futurmap\Dev-Outils\GStarCAD\GRX20\fmapProjects\x64\Release\" /y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
